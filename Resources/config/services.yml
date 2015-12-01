@@ -1,0 +1,20 @@
+# This file is part of the CampaignChain package.
+#
+# (c) CampaignChain, Inc. <info@campaignchain.com>
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+parameters:
+    campaignchain.operation.campaignchain.ezplatform.schedule:
+        bundle_name: "campaignchain/operation-ezplatform"
+        module_identifier: "campaignchain-ezplatform-schedule"
+        form_type: "CampaignChain\\Operation\\EZPlatformBundle\\Form\\Type\\EZPlatformScheduleOperationType"
+
+services:
+    campaignchain.job.operation.campaignchain.ezplatform.schedule:
+        class: CampaignChain\Operation\EZPlatformBundle\Job\EZPlatformSchedule
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]
+    campaignchain.job.report.campaignchain.ezplatform.schedule:
+        class: CampaignChain\Operation\EZPlatformBundle\Job\EZPlatformScheduleReport
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]

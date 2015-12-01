@@ -1,0 +1,10 @@
+
+modules:
+    campaignchain-ezplatform-schedule:
+        display_name: Schedule eZ Platform Content
+        description: Schedule content managed inside eZ Platform as part of a CampaignChain campaign.
+        services:
+            job: campaignchain.job.operation.ezplatform.schedule
+            report: campaignchain.job.report.ezplatform.schedule
+        params: 
+            owns_location: true
