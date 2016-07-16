@@ -17,8 +17,13 @@
 
 namespace CampaignChain\Operation\EZPlatformBundle;
 
+use CampaignChain\Operation\EZPlatformBundle\DependencyInjection\CampaignChainOperationEZPlatformExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class CampaignChainOperationEZPlatformBundle extends Bundle
 {
+    public function getContainerExtension()
+    {
+        return new CampaignChainOperationEZPlatformExtension();
+    }
 }
