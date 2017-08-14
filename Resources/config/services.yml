@@ -21,7 +21,7 @@ parameters:
 services:
     campaignchain.job.operation.campaignchain.ezplatform.schedule:
         class: CampaignChain\Operation\EZPlatformBundle\Job\EZPlatformSchedule
-        arguments: [ @doctrine, @service_container ]
+        arguments: [ '@doctrine', '@service_container' ]
     campaignchain.job.report.campaignchain.ezplatform.schedule:
         class: CampaignChain\Operation\EZPlatformBundle\Job\EZPlatformScheduleReport
-        arguments: [ @doctrine, @service_container ]
+        arguments: [ '@doctrine', '@service_container' ]
