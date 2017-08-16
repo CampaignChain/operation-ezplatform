@@ -29,7 +29,7 @@ class EZPlatformScheduleOperationType extends OperationType
             'choices'   => $this->content,
             'required'  => true,
             'label' => false,
-            'empty_value' => 'Select a Content Type',
+            'placeholder' => 'Select a Content Type',
             'empty_data' => null,
             'attr' => array(
                 'show_image' => false,
