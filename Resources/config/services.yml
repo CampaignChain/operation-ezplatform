@@ -25,3 +25,10 @@ services:
     campaignchain.job.report.campaignchain.ezplatform.schedule:
         class: CampaignChain\Operation\EZPlatformBundle\Job\EZPlatformScheduleReport
         arguments: [ '@doctrine', '@service_container' ]
+    campaignchain.operation.ezplatform.form.type.schedule:
+        class: CampaignChain\Operation\EZPlatformBundle\Form\Type\EZPlatformScheduleOperationType
+        arguments:
+            - '@doctrine'
+            - '@service_container'
+        tags:
+            - { name: form.type }

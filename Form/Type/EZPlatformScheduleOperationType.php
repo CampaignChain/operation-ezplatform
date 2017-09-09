@@ -19,7 +19,7 @@ namespace CampaignChain\Operation\EZPlatformBundle\Form\Type;
 
 use CampaignChain\CoreBundle\Form\Type\OperationType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class EZPlatformScheduleOperationType extends OperationType
 {
@@ -41,7 +41,7 @@ class EZPlatformScheduleOperationType extends OperationType
         ));
     }
 
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $defaults = array();
         $resolver->setDefaults($defaults);
