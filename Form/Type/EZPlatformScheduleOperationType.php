@@ -25,8 +25,10 @@ class EZPlatformScheduleOperationType extends OperationType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $this->setOptions($options);
+
         $builder->add('content_type', 'choice', array(
-            'choices'   => $this->content,
+            'choices'   => $options['data'],
             'required'  => true,
             'label' => false,
             'placeholder' => 'Select a Content Type',
@@ -43,6 +45,8 @@ class EZPlatformScheduleOperationType extends OperationType
 
     public function configureOptions(OptionsResolver $resolver)
     {
+        parent::configureOptions($resolver);
+
         $defaults = array();
         $resolver->setDefaults($defaults);
     }
